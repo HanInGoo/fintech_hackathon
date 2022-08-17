@@ -1,0 +1,143 @@
+<!DOCTYPE HTML>
+<!--
+	Spectral by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>위드미</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="static/css/main.css" />
+        <link rel="stylesheet" href="static/css/map.css" />
+		<noscript><link rel="stylesheet" href="static/css/noscript.css" /></noscript>
+		<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.6.2/css/font-awesome.min.css">
+		<!--<link rel="stylesheet" href="assets/css/bootstrap.min.css">-->
+	</head>
+	<body class="is-preload">
+
+		<!-- Page Wrapper -->
+        <div id="page-wrapper">
+
+            <!-- Header -->
+            <header id="header">
+                <h1><a href="index.html">위드미</a></h1>
+                <nav id="nav">
+                    <ul>
+                        <li class="special">
+                            <a href="#menu" class="menuToggle"><span>Menu</span></a>
+                            <div id="menu">
+                                <ul>
+                                    <li><a href="index.html">Home</a></li>
+                                    <li class='top_menu'>
+                                        <a href="main.html">Main Service</a>
+                                            <li class="sub_1">
+                                                <a href="goal.html" class="dropdown-item">목표/약속설정</a>
+                                                <a href="management.html" class="dropdown-item">자산관리추천</a>
+                                                <a href="information.html" class="dropdown-item">주요정보알림</a>
+                                            </li>
+                                    </li>
+                                    <li class='top_menu'>
+                                        <a href="sub.html">Sub Service</a>
+                                            <li class="sub_1">
+                                                <a href="maps.html" class="dropdown-item">지도기반 세무사 추천</a>
+                                                <a href="community.html" class="dropdown-item">Community</a>
+                                            </li>
+                                    </li>
+                                    <li><a href="signup.html">Sign Up</a></li>
+                                    <li><a href="login.html">Log In</a></li>
+                                    <!--<li><a href="maps.html">지도 테스트</a></li>-->
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </nav>
+            </header>
+
+
+				<!-- Main -->
+					<article id="main">
+						<header>
+							<h2>금융상품 추천서비스</h2>
+
+						</header>
+						<section class="wrapper style5">
+							<div class="inner">
+
+                                <button type="button" onclick="location.href='management_loan_1.html'">
+                                        대출(금융)
+                                    </button>
+
+                                     <button type="button" onclick="location.href='management_loan_2.html'">
+                                        대출(대부)
+                                     </button>
+
+                                    <button type="button" onclick="location.href='management_card.html'">
+                                        카드
+                                     </button>
+
+                                    <button type="button" onclick="location.href='management_insurance.html'">
+                                        보험
+                                    </button>
+
+								<section>
+                                    <form action = "http://localhost:5000/result_loan_1_1.html" method = "POST">
+                                        <p>생년 <input type = "text" name = "생년" /></p>
+                                        <p>이자 <input type = "text" name = "이자" /></p>
+                                        <p>금액 <input type = "text" name = "금액" /></p>
+                                        <p><input type = "submit" value = "submit" /></p>
+                                    </form>
+
+                                    <table>
+                                        <tr>
+                                            {% for header in headings %}
+                                            <th>{{ header}}</th>
+                                            {%  endfor %}
+                                        <tr>
+                                        {% for row in result %}
+                                        <tr>
+                                            {% for cell in row %}
+                                                <td> {{ cell }}</td>
+                                            {% endfor %}
+                                        </tr>
+                                        {% endfor %}
+                                    <table>
+
+                                </section>
+
+							</div>
+						</section>
+					</article>
+
+				<!-- Footer -->
+					<footer id="footer">
+						<ul class="icons">
+							<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+							<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+							<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+							<li><a href="#" class="icon brands fa-dribbble"><span class="label">Dribbble</span></a></li>
+							<li><a href="#" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
+						</ul>
+						<ul class="copyright">
+							<li>&copy; GET READY</li>
+						</ul>
+					</footer>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="static/js/jquery.min.js"></script>
+			<script src="static/js/jquery.scrollex.min.js"></script>
+			<script src="static/js/jquery.scrolly.min.js"></script>
+			<script src="static/js/browser.min.js"></script>
+			<script src="static/js/breakpoints.min.js"></script>
+			<script src="static/js/util.js"></script>
+			<script src="static/js/main.js"></script>
+
+
+            <script src="static/js/menu.js"></script>
+
+
+	</body>
+</html>
